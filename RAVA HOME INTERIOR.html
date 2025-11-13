@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rava Home Interiors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #f0c040;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .btn {
+      background: #f0c040;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ffda70;
+      transform: scale(1.05);
+    }
+
+    /* PRODUCT GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* ORDER FORM */
+    .order-section {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .order-form input,
+    .order-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .confirmation-text {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* CONTACT PAGE */
+    .contact-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .intro-text {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #555;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      padding: 20px;
+      align-items: start;
+    }
+
+    .contact-form, .contact-info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    .map-container {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">🏠 Rava Home Interiors</div>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#products">Products</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <img src="logo.png" alt="images" />
+      <h1>Transform Your Home with Elegance</h1>
+      <p>Discover stylish furniture and cozy décor that make your house a home.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <h2 style="text-align:center;">Our Products</h2>
+    <div class="product-grid">
+      
+      <div class="product-grid">
+      <div class="product-card fade-in">
+        <img src="SOFA 2 SEATER.jfif" alt="images" />
+        <h3>Modern 2 Seater</h3>
+        <p>UGX 900,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Bed.jfif" alt="images" />
+        <h3>Luxury Bed</h3>
+        <p>UGX 2,000,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Bed 3.jfif" alt="images" />
+        <h3>Luxury Bed</h3>
+        <p>UGX 2,500,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Bed 2.jfif" alt="images" />
+        <h3>Luxury Bed</h3>
+        <p>UGX 3,000,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="BED 4.jfif" alt="images" />
+        <h3>Luxury Bed</h3>
+        <p>UGX 3,500,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Blanket.jfif" alt="images" />
+        <h3>Soft Blanket</h3>
+        <p>UGX 200,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Blanket (2).jfif" alt="images" />
+        <h3>Soft Blanket</h3>
+        <p>UGX 200,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Dinning table set.jfif" alt="images" />
+        <h3>Wooden Table</h3>
+        <p>UGX 1,500,000</p>
+      </div>
+      <div class="product-card fade-in">
+        <img src="Dinning table.jfif" alt="images" />
+        <h3>Wooden Table</h3>
+        <p>UGX 2,500,000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section id="order">
+    <h2 style="text-align:center;">Place Your Order</h2>
+    <form id="orderForm" class="order-section order-form fade-in">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label>Product Name</label>
+      <input type="text" id="product" placeholder="e.g. Modern Chair" required>
+
+      <label>Quantity</label>
+      <input type="number" id="quantity" min="1" value="1" required>
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="+256..." required>
+
+      <label>Delivery Address</label>
+      <textarea id="address" rows="3" placeholder="Enter your delivery address" required></textarea>
+
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+    <p id="confirmation" class="confirmation-text"></p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p class="intro-text">We’d love to hear from you! Whether it’s an order, a question, or feedback — feel free to reach out below.</p>
+
+    <div class="contact-container">
+      <form id="contactForm" class="contact-form fade-in">
+        <label>Full Name</label>
+        <input type="text" id="contactName" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" id="contactEmail" placeholder="Enter your email" required>
+
+        <label>Message</label>
+        <textarea id="contactMessage" rows="4" placeholder="Type your message..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info fade-in">
+        <h3>Get in Touch</h3>
+        <p>📞 <strong>Phone:</strong> +256 758 763 334</p>
+        <p>📧 <strong>Email:</strong> info@ravahomeinteriors.com</p>
+        <p>📍 <strong>Location:</strong> Ham Shopping Grounds, Kampala, Uganda</p>
+
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7976.843994238018!2d32.5765!3d0.3153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb4f0b112b7f%3A0x8d70a7a3b4bfa927!2sHam%20Shopping%20Grounds!5e0!3m2!1sen!2sug!4v1701234567890"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <p id="contactConfirmation" class="confirmation-text"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Rava Home Interiors | Designed with ❤️ by Rava Designs</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm")?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const product = document.getElementById("product").value;
+      const quantity = document.getElementById("quantity").value;
+
+      document.getElementById("confirmation").innerText =
+        `✅ Thank you, ${name}! Your order for ${quantity} ${product}(s) has been received. We will contact you shortly.`;
+
+      this.reset();
+    });
+
+    document.getElementById("contactForm")?.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("contactName").value;
+      document.getElementById("contactConfirmation").innerText =
+        `✅ Thank you, ${name}! Your message has been sent successfully. We'll get back to you soon.`;
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>
